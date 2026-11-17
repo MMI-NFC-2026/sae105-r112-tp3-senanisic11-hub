@@ -45,11 +45,26 @@ Les margin négatifs à gauche et à droite correspondent à l'espace entre le n
   scroll-snap-type: x mandatory;
 }
 
+
 .carousel__item {
-  flex: 1 0 260px;
+  flex: 0 0 80%;
   scroll-snap-align: center;
 }
 
 .carousel__item img {
   display: block;
+}
+
+/* Tablettes */
+@media screen and (min-width: 768px) {
+  .carousel__item {
+    flex-basis: 45%;
+  }
+}
+
+/* Ordinateurs */
+@media screen and (min-width: 1024px) {
+  .carousel__item {
+    flex-basis: 30%;
+  }
 }
