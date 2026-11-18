@@ -14,15 +14,27 @@ Les margin négatifs à gauche et à droite correspondent à l'espace entre le n
 */
 
 /* Compléter la suite du code */
+.carousel {
+  position: relative;
+}
+
 .carousel__controls {
   display: flex;
-  gap: 16px;
   align-items: center;
-  justify-content: center;
-  margin: 16px 0;
+  justify-content: space-between;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+
+  margin: 0;
+  pointer-events: none;
 }
 
 .carousel__button {
+  pointer-events: auto;
   width: 50px;
   height: 50px;
   display: flex;
